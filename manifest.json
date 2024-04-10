@@ -1,0 +1,27 @@
+{
+    "name": "KITナビ成績改竄",
+    "description": "既に成績が出た科目の合否を改竄できます．※ジョークアプリです．",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://navi.mars.kanazawa-it.ac.jp/portal/student/KITP00500",
+                "https://navi.mars.kanazawa-it.ac.jp/portal/student/KITP00500/"
+            ],
+            "css": [
+                "gaming_v2.css"
+            ],
+            "js": [
+                "popup.js"
+            ]
+        }
+    ]
+}
